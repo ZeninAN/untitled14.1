@@ -19,8 +19,6 @@ class GameTest {
         assertEquals(first, players.findByName(first.getName()));
     }
 
-
-
     @Test
     void Registered() {
         players.register(first);
