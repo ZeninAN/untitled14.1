@@ -22,10 +22,10 @@ public class Game {
         items.add(player);
     }
 
-    public int round(String playerName1, String playerName2, Comparator<Player> comparator) {
+    public int round(String playerName1, String playerName2) {
         Player player1 = findByName(playerName1);
         Player player2 = findByName(playerName2);
-        int result = comparator.compare(player1, player2);
+        int result = player1.getStrength() - player2.getStrength();
         if (result > 0) {
             return 1;
         }

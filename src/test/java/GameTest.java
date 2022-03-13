@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
     private final Game players = new Game();
-    private final Player comparator = new Player();
     private final Player first = new Player("человек", 1, 23);
     private final Player second = new Player("боксер", 2, 89);
     private final Player third = new Player("лыжник", 3, 23);
@@ -35,7 +34,7 @@ class GameTest {
         players.register(second);
 
         int expected = 2;
-        int actual = players.round("человек", "боксер", comparator);
+        int actual = players.round("человек", "боксер");
 
         assertEquals(expected, actual);
     }
@@ -46,7 +45,7 @@ class GameTest {
         players.register(third);
 
         int expected = 0;
-        int actual = players.round("человек", "лыжник", comparator);
+        int actual = players.round("человек", "лыжник");
 
         assertEquals(expected, actual);
     }
@@ -57,7 +56,7 @@ class GameTest {
         players.register(second);
 
         int expected = 1;
-        int actual = players.round("боксер", "человек", comparator);
+        int actual = players.round("боксер", "человек");
 
         assertEquals(expected, actual);
     }
@@ -67,7 +66,7 @@ class GameTest {
         players.register(first);
 
 
-        Assertions.assertThrows(NotRegisteredException.class, () -> players.round("человек", "боксер", comparator));
+        Assertions.assertThrows(NotRegisteredException.class, () -> players.round("человек", "боксер"));
     }
 
     @Test
