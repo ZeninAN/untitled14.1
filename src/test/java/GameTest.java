@@ -26,6 +26,8 @@ class GameTest {
 
         Player[] expected = new Player[]{first, second, third};
         Player[] actual = players.findAll();
+
+        assertArrayEquals(expected,actual);
     }
 
     @Test
@@ -78,5 +80,7 @@ class GameTest {
 
         Player[] expected = new Player[]{first};
         Player[] actual = players.findAll();
+
+        assertArrayEquals(expected,actual);
     }
 }
