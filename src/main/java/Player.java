@@ -11,10 +11,6 @@ public class Player implements Comparator<Player> {
         this.strength = strength;
     }
 
-    public Player() {
-    }
-
-
     @Override
     public int compare(Player o1, Player o2) {
         return o1.getStrength() - o2.getStrength();
