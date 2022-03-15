@@ -3,7 +3,7 @@ import java.util.Collection;
 import java.util.function.Predicate;
 
 public class Game {
-    private Collection<Player> items = new ArrayList<>();
+    private final Collection<Player> items = new ArrayList<>();
 
     public void save(Player item) {
         items.add(item);

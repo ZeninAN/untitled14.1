@@ -1,9 +1,9 @@
 import java.util.Comparator;
 
 public class Player implements Comparator<Player> {
-    private int id;
-    private String name;
-    private int strength;
+    private final int id;
+    private final String name;
+    private final int strength;
 
     public Player(String name, int id, int strength) {
         this.name = name;
