@@ -19,6 +19,7 @@ class GameTest {
         assertEquals(first, players.findByName(first.getName()));
     }
 
+
     @Test
     void Registered() {
         players.register(first);
@@ -60,6 +61,7 @@ class GameTest {
 
         int expected = 1;
         int actual = players.round("боксер", "человек");
+
 
         assertEquals(expected, actual);
     }
